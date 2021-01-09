@@ -5,15 +5,18 @@
 
 def reverse(ss):
     # Write code here
-    pass
+    if len(ss) <= 1:
+        return ss
+    else:
+        return ss[-1] + reverse(ss[:-1])
 
-# print(reverse("")) 
+print(reverse("")) 
 # => ""
-# print(reverse("a")) 
+print(reverse("a")) 
 # => "a"
-# print(reverse("ab")) 
+print(reverse("ab")) 
 # => "ba"
-# print(reverse("computer")) 
+print(reverse("computer")) 
 # => "retupmoc"
-# print(reverse(reverse("computer"))) 
+print(reverse(reverse("computer"))) 
 # => "computer"
