@@ -7,15 +7,21 @@
 
 def fib(n):
     # Write code here
-    pass
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        result = fib(n - 1) + fib(n - 2)
+        return result
 
-# print(fib(-1))
+print(fib(-1))
 # => 0
-# print(fib(0))
+print(fib(0))
 # => 0
-# print(fib(1))
+print(fib(1))
 # => 1
-# print(fib(2))
+print(fib(2))
 # => 1
-# print(fib(7))
+print(fib(7))
 # => 13
