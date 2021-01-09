@@ -5,7 +5,15 @@
 
 def factorial(n):
     # Write code here
-    pass
+    if n < 1:
+        return ('Number must be at least 1')
+    elif n == 1:
+        return 1
+    else:
+        result = n * factorial(n - 1)
+        return result
 
-# print(factorial(5))
+print(factorial(5))
 # => 120
+
+print(factorial(7))
