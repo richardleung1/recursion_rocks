@@ -8,7 +8,20 @@
 
 def coin_flips(n):
     # Write code here
-    pass
+    if n < 1:
+        return ('Coin must be flipped at least 1 time')
+    elif n == 1:
+        outcomes = ['H', 'T']
+        return outcomes
+    else:
+        possible_outcomes = ['H', 'T']
+        outcomes = []
+        for i in possible_outcomes:
+            for outcome in coin_flips(n - 1):
+                outcomes.append(i + outcome)
+        return outcomes
 
-# print(coinFlips(2)) 
+print(coin_flips(2)) 
 # => ["HH", "HT", "TH", "TT"]
+
+print(coin_flips(3)) 
