@@ -5,9 +5,7 @@
 
 def factorial(n):
     # Write code here
-    if n < 1:
-        return ('Number must be at least 1')
-    elif n == 1:
+    if n == 0:
         return 1
     else:
         result = n * factorial(n - 1)

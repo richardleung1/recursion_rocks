@@ -5,8 +5,8 @@
 
 def find_max(l):
     # Write code here
-    if len(l) <= 0:
-        return 'Array cannot be empty'
+    if len(l) == 0:
+        return []
     if len(l) == 1:
         return l[0]
     else:

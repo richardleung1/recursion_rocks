@@ -9,15 +9,15 @@
 # pretty_print(inner_dictionary, indent + '..');
 # ...
 
-def pretty_print(dictionary, indent):
+def pretty_print(dictionary, indent, level = 1):
     # Write code here
     for key in dictionary:
         value = dictionary[key]
         if type(value) is dict:
-            print (f"{indent}{key}:")
-            pretty_print(value, indent + indent)
+            print (f"{indent * level}{key}:")
+            pretty_print(value, indent, level + 1)
         else:
-            print (f"{indent}{key}: {value}")
+            print (f"{indent * level}{key}: {value}")
 
 o1 = {"a": 1, "b": 2}
 o2 = {"a": 1, "b": 2, "c": {"name": "Bruce Wayne", "occupation": "Hero"}, "d": 4}
